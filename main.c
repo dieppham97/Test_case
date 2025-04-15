@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <string.h>
-#include <stdlib.h>
-#include "ISA.h"
+#include "execute.h"
 
 uint8_t A[16];
 uint8_t D[16];
@@ -245,10 +241,12 @@ void hexToBinary(uint32_t hex, char *binary)
 
 int main()
 {
-	// Nhập lệnh hex từ bàn phím
+	// Input instruction
 	uint32_t hex_instruction;
 	printf("Input instruction in hex (e.g., 0x10000000): ");
 	scanf("%x", &hex_instruction);
+
+	execute(hex_instruction);
 
 	// Chuyển đổi hex thành binary
 	char binary[33];

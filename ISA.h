@@ -3,24 +3,11 @@
 
 #include <stdint.h>
 
-// Instruction Opcodes for D2SSA format
-#define OPCODE_ADDAB 0x1000
-#define OPCODE_SUBAB 0x1001
-#define OPCODE_MULAB 0x1002
-#define OPCODE_DIVAB 0x1003
-#define OPCODE_ANDAB 0x1004
-#define OPCODE_ORAB 0x1005
-#define OPCODE_XORAB 0x1006
-#define OPCODE_NOTAB 0x1007
-#define OPCODE_SHLAB 0x1008
-#define OPCODE_SHRAB 0x1009
-#define OPCODE_MOVAB 0x100A
-#define OPCODE_CMPAB 0x100B
+#define QUANTITY_INS_MEM 5
 
 // Instruction Opcodes for D2SS format
-#define OPCODE_LDB 0x01000
-#define OPCODE_LDD 0x01011
-// Thêm các opcode mới cho D2SS ở đây
+#define OPCODE_LDB 0x8
+#define OPCODE_LDD 0xB
 
 typedef struct Mem
 {
